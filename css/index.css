@@ -559,9 +559,6 @@ footer p:nth-of-type(2){
 header #nav{
     margin: 0 auto;
 }
-header #nav #logo{
-    top: -15px;
-}
 
 header #nav #logo img.logo1{
     display: none;
