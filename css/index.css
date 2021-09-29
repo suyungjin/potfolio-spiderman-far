@@ -1,0 +1,753 @@
+@charset "utf-8";
+:root {
+    --main-color: #1e1e1e;
+    --text-grey: #7e7e7e;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+body{
+    font-size:0.85vw;
+}
+
+header{
+    width:100%;
+    height: 60px;
+    background: #202020;
+    position: fixed;
+    z-index:999;
+    left:0;
+    top:0;
+}
+header #nav{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+header #nav #logo{
+    vertical-align: top;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 10;
+}
+
+header #nav #logo img.logo2{
+    display: none;
+}
+
+header #nav #header-right{
+    display: flex;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+header #nav select{
+    background: black;
+    color:white;
+    width:100px;
+    height: 40px;
+    font-size:16px;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+header #nav p:nth-of-type(1),
+header #nav p:nth-of-type(2){
+    font-size: 16px;
+    margin: 18px 0px 0px 20px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Noto Sans KR';
+}
+header #nav p:nth-of-type(1){
+    position: relative;
+}
+header #nav p:nth-of-type(1)::after{
+    content: '';
+    width: 2px;
+    height: 16px;
+    background: white;
+    position: absolute;
+    top: 4px;
+    right: -11px;
+}
+
+#main{
+    width:100%;
+    height:80vh;
+    background: url(../images/스파이더맨메인베너.jpg) top/cover no-repeat;
+    position: relative;
+}
+
+#main::before{
+    content: '';
+    width:50%;
+    height:100%;
+    position: absolute;
+    z-index:2;
+    background:
+    linear-gradient(to right, #181818 0, 
+    rgba(23,23,23,0.98) 20%,
+    rgba(23,23,23,0.95) 25%,
+    rgba(23,23,23,0.92) 30%,
+    rgba(23,23,23,0.9) 35%,
+    rgba(23,23,23,0.87) 40%,
+    rgba(23,23,23,0.82) 45%,
+    rgba(23,23,23,0.75) 50%,
+    rgba(23,23,23,0.63) 55%,
+    rgba(23,23,23,0.47) 60%,
+    rgba(23,23,23,0.27) 65%,
+    rgba(23,23,23,0.08) 80%,
+    rgba(23,23,23,0.03) 95%,
+    rgba(23,23,23,0.0) 100%);
+    left:0;
+    top:0;
+}
+
+#main .title{
+    width:425px;
+    height:287px;
+    background: url(../images/스파이더맨로고.png) 100%/100% no-repeat;
+    position: absolute;
+    top:25%;
+    left:7%;
+    z-index:3;
+}
+#main ul{
+    position: absolute;
+    width: 500px;
+    z-index: 10;
+    top:55%;
+    left:5%;
+    color:white;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+#main li:nth-of-type(1){
+    color: white;
+    font-size: 24px;
+}
+#main li:nth-of-type(2),
+#main li:nth-of-type(4){
+    line-height: 2.5em;
+    color:var(--text-grey);
+    font-weight: bold;
+}
+
+#content{
+    width:85%;
+    margin: auto;    
+}
+#content figure{
+    width:100%;
+    height:60px;
+    background: linear-gradient(to right,
+     #303030 0, 
+     rgb(37, 37, 37) 100%);
+     box-shadow: 0.5px 0.5px 10px rgb(29, 29, 29) ;
+     display: flex;
+     flex-wrap: wrap;
+     position: relative;
+}
+#content figure img{
+    width: 33px;
+    height: 60px;
+    position: absolute;
+    left: 30px;
+    top: 0;
+    z-index: 3;
+}
+
+#content figure button{
+    width: 125px;
+    background: rgb(252, 20, 20);
+    font-size: 13px;
+    color:white;
+    border:0;
+    outline: 0;;
+    border-radius: 0.5em;
+    height:35px;
+    position: absolute;
+    right: 30px;
+    top:13px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#content div.line{
+    width:100%;
+    height:auto;
+    padding: 3% 0 3% 0;    
+    text-align: center;
+    margin-top: 5%;
+    position: relative;
+}
+#content div.line::before{
+    content:'';
+    position: absolute;
+    width:100%;
+    height:1px;
+    background: linear-gradient(to right, #777 0 , rgb(109, 109, 109,0.1) 50%,#777 100%);
+    z-index: 3;
+    left:0;
+    top:0;
+}
+#content div.line::after{
+    content:'';
+    position: absolute;
+    width:100%;
+    height:1px;
+    background: linear-gradient(to right, #777 0 , rgb(109, 109, 109,0.1) 50%,#777 100%);
+    z-index: 3;
+    left:0;
+    bottom:0;
+}
+#content div.line p{
+    color: var(--main-color);
+    box-sizing: border-box;
+    font: 16px/24px 'Noto Sans KR';
+    font-weight: 600;
+}
+#content section{
+    width:100%;
+    margin-top: 5%;
+}
+
+#content section #vidtitle{
+    width:30%;
+    height:7vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#content section #vidtitle dt{
+    color:var(--main-color);
+    font-size:30px;
+}
+#content section #vidtitle dd{
+    position: relative;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size:16px;
+}
+
+#content section #vidtitle dd::before{
+    content:'';
+    position: absolute;
+    left:-10px;
+    top:0;
+    width:1px;
+    height:30px;
+    background: var(--main-color);
+}
+
+#content section ul{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#content section li{
+    color:white;
+    flex: 0 1 48%;
+    margin: 1%;
+}
+
+#content section li iframe{
+    width:620px;
+    height: 360px;
+}
+#content div#detail{
+    width:100%;
+    margin-top: 5%;
+}
+#detail .contentlogo{
+    width: 130px;
+    height: 60px;
+}
+#content div#detail p.txt1{
+    width:40%;
+    height: 3vh;
+    color:var(--main-color);
+    font-size: 24px;
+    margin-top: 1em;
+}
+#content div#detail ul{
+    width:100%;
+    margin-top: 2%;
+    justify-content: left;
+}
+#detail .character{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#detail .character li{
+    flex: 0 1 18%;
+    margin: 1%;
+}
+#detail .character li dl{
+    width: 270px;
+    height: 370px;
+    margin: auto;
+    box-shadow: 1em 1em 2em black;
+}
+#detail .character li dt{
+    width: 270px;
+    height: 288px;
+    cursor: pointer;
+}
+#detail .character li dd:nth-of-type(1){
+    width: 270px;
+    height: 10px;
+    background: #EE1D23;
+}
+#detail .character li dd:nth-of-type(2){
+    width: 270px;
+    height: 72px;
+    background: var(--main-color)
+}
+#detail .character li dd:nth-of-type(2) p{
+    font-size: 24px;
+    color: white;
+    margin-left: 16px;
+    transform: translateY(50%);
+}
+#detail .character li:nth-of-type(1) dt{
+    background: url(../images/마블캐릭터/피터.jpg)center/cover;
+}
+#detail .character li:nth-of-type(2) dt{
+    background: url(../images/마블캐릭터/닉퓨리.jpg)center/cover;
+}
+
+#detail .character li dt:hover{
+    background-size: 110%;
+}
+
+article{
+    width: 100%;
+    margin-top: 3%;
+    padding-top: 2%;
+    background: var(--main-color);
+}
+article #content2{
+    width: 85%;
+    margin: auto;
+}
+article p.details{
+    font: 700 30px/30px 'Noto Sans KR';
+    color: white;
+}
+article #content2 ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    font-size: 16px;
+    justify-content: center;
+}
+article #content2 ul li{
+    flex: 0 1 300px;
+}
+article #content2 ul dl{
+    padding: 60px 60px 0 0;
+}
+article #content2 ul dt{
+    color: #5e5e5e;
+}
+
+article #content2 ul li:nth-of-type(7) dt,
+article #content2 ul li:nth-of-type(8) dt,
+article #content2 ul li:nth-of-type(9) dt,
+article #content2 ul li:nth-of-type(10) dt{
+    color: white;
+    margin-top: 16px;
+}
+
+article #content2 ul dd{
+    color: white;
+}
+article #content3{
+    width: 85%;
+    margin: auto;
+    margin-top: 5%;
+}
+article #content3 p.similar{
+    font: 700 30px/30px 'Noto Sans KR';
+    color: white;
+    margin-bottom: 1%;
+}
+article #content3 ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+article #content3 ul li{
+    background: red;
+    flex: 0 1 310px;
+    height: 180px;
+    margin: 5px;
+    border: 1px solid #707070;
+    cursor: pointer;
+}
+article #content3 ul li:nth-of-type(1){
+    background: url(../images/블랙위도우2021.jpg)center/cover;
+}
+article #content3 ul li:nth-of-type(2){
+    background: url(../images/캡틴마블2019.jpg)center/cover;
+}
+article #content3 ul li:nth-of-type(3){
+    background: url(../images/엔드게임2019.jpg)center/cover;
+}
+article #content3 ul li:nth-of-type(4){
+    background: url(../images/앤트맨와스프2018.jpg)center/cover;
+}
+article #content3 ul li:nth-of-type(5){
+    background: url(../images/인피니티워2018.jpg)center/cover;
+}
+article #content3 ul li:nth-of-type(6){
+    background: url(../images/블랙팬서2018.jpg)center/cover;
+}
+article #content3 ul li:nth-of-type(7){
+    background: url(../images/토르\ 라그나로크2017.jpg)center/cover;
+}
+article #content3 ul li:nth-of-type(8){
+    background: url(../images/스파이더홈2017.jpg)center/cover;
+}
+article #content3 ul li:nth-of-type(9){
+    background: url(../images/가오갤2\ 2017.jpg)center/cover;
+}
+article #content3 ul li:nth-of-type(10){
+    background: url(../images/닥터스트레인지2016.jpg)center/cover;
+}
+
+article #content3 ul li:hover{
+    background-size: 110%;
+}
+
+article #content4{
+    width: 85%;
+    margin: auto;
+    margin-top: 5%;
+}
+article #content4 p.notice{
+    font: 700 30px/30px 'Noto Sans KR';
+    color: white;
+}
+article #content4 ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    justify-content: center;
+}
+article #content4 li{
+    flex: 0 1 48%;
+    margin: 1%;
+}
+article #content4 li dl{
+    width: 520px;
+    height: 395px;
+    margin: auto;
+}
+
+article #content4 li dt{
+    width: 520px;
+    height: 320px;
+    border: 1px solid #707070;
+}
+
+article #content4 li:nth-of-type(1) dt{
+    background: url(../images/샹치\ 썸네일.jpg)center/cover;
+}
+article #content4 li:nth-of-type(2) dt{
+    background: url(../images/이터널스.jpg)center/cover;
+}
+article #content4 li dd:nth-of-type(1){
+    font-size: 16px;
+    color: white;
+}
+article #content4 li dd:nth-of-type(2){
+    width: 520px;
+    height: 60px;
+    font-size: 13px;
+    letter-spacing: -0.65px;
+    color: var(--text-grey);
+}
+footer{
+    width:100%;
+    background:var(--main-color);
+    padding-top: 10%;
+}
+footer #footerbox{
+    width: 85%;
+    margin: auto;
+}
+footer p:nth-of-type(1){
+    font-size: 16px;
+    color: white;
+    margin: 0 0 30px;
+}
+footer ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    flex-direction: row;
+}
+footer li:nth-of-type(1),
+footer li:nth-of-type(2),
+footer li:nth-of-type(3){
+    flex: 0 1 20%;
+    font-size: 13px;
+}
+footer li dl{
+    height: 115px;
+}
+footer li dl dt, footer li dd{
+    margin-bottom: 18px;
+    cursor: pointer;
+}
+footer li:nth-of-type(4){
+    flex: 0 1 40%;
+    position: relative;
+}
+footer li:nth-of-type(4) dl{
+    width: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+}
+footer li:nth-of-type(4) dt{
+    flex: 0 1 100%;
+    text-align: center;
+    font-size: 20px;
+}
+footer li:nth-of-type(4) dd{
+    flex: 0 1 33.3%;
+    font-size: 30px;
+    text-align: center;
+}
+footer p:nth-of-type(2){
+    color: var(--text-grey);
+    text-align: center;
+    padding: 60px;
+    font-size: 16px;
+}
+#main::after{background: none;}
+
+/* 모바일 */
+@media screen and (max-width: 600px){
+    body{
+        background: var(--main-color);
+    }
+#main .title{
+    width: 60%;
+    left: 50%;
+    top:45%;
+    transform: translateX(-50%);
+}
+header #nav{
+    margin: 0 auto;
+}
+header #nav #logo{
+    top: -15px;
+}
+
+header #nav #logo img.logo1{
+    display: none;
+}
+header #nav #logo img.logo2{
+    display: block;
+}
+header #nav select{
+    width: 30%;
+    height: 24px;
+    font-size: 12px;
+    margin-top: 17px;
+}
+header #nav p:nth-of-type(1),
+header #nav p:nth-of-type(2){
+    margin: 20px 0 0 20px;
+    font-size: 12px;
+    align-content: center;
+}
+
+header #nav p:nth-of-type(1)::after{
+    top:2px;
+}
+
+header{
+    display: flex;
+}
+
+#main{
+    background: url(../images/스파이더맨배너2.jpg) center/cover;
+    height:40vh;
+}
+#main::before{
+    background: none;
+}
+#main::after{
+    position: absolute;
+    content: '';
+    width:100%;
+    height:30%;
+    background:
+    linear-gradient(to top, #181818 0, 
+    rgba(23,23,23,0.98) 20%,
+    rgba(23,23,23,0.95) 25%,
+    rgba(23,23,23,0.92) 30%,
+    rgba(23,23,23,0.9) 35%,
+    rgba(23,23,23,0.87) 40%,
+    rgba(23,23,23,0.82) 45%,
+    rgba(23,23,23,0.75) 50%,
+    rgba(23,23,23,0.63) 55%,
+    rgba(23,23,23,0.47) 60%,
+    rgba(23,23,23,0.27) 65%,
+    rgba(23,23,23,0.08) 80%,
+    rgba(23,23,23,0.03) 95%,
+    rgba(23,23,23,0.0) 100%);
+    bottom: 0;
+    left:0;
+}
+#main .title{
+    top:20%;
+}
+#main ul{
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    top:110%;
+    font-size: 3em;
+    line-height: 2em;
+}
+
+#main li:nth-of-type(1){
+    font-size: 2em;
+}
+
+article #content3 p.similar{
+    margin-bottom: 5%;
+}
+
+#content{
+    margin-top: 70%;
+}
+
+#content section #vidtitle{
+    width: 100%;
+}
+
+#content section #vidtitle dt{
+    color: white;
+}
+#content section #vidtitle dd{
+    color: white;
+}
+
+#content section #vidtitle dd::before{
+    background: white;
+}
+#content div#detail ul{
+    margin-top: 10%;
+    justify-content: center;
+}
+
+#content div#detail p.txt1{
+    color: white;
+}
+#content div.line{
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#content div.line p{
+    font: 13px/16px 'Noto Sans KR';
+    color: white;
+}
+
+#content section{
+    margin-top: 0;
+}
+#content section li{
+    flex: 0 1 100%;
+}
+
+#content section li iframe{
+    width:100%;
+    height: 30vh;
+}
+
+#detail .character li{
+    flex: 0 1 80%;
+    margin: 1%;
+}
+
+#detail .character li dl{
+    width: 100%;
+}
+#detail .character li dt{
+    width: 100%;
+}
+#detail .character li dd:nth-of-type(1){
+    width: 100%;
+}
+#detail .character li dd:nth-of-type(2){
+    width: 100%;
+    
+}
+article #content3 ul li{
+    flex: 0 1 100%;
+}
+article #content4 li{
+    flex: 0 1 100%;
+    margin: 5% 0 5% 0;
+}
+article #content4 li dl{
+    width: 100%;
+    margin: auto;
+}
+
+article #content4 li dt{
+    width: 100%;
+    height: 60%;
+}
+article #content4 li dd:nth-of-type(1),
+article #content4 li dd:nth-of-type(2){
+    width: 100%;
+}
+footer #footerbox{
+    margin-top: auto;
+}
+footer p:nth-of-type(1){
+    text-align: center;
+    margin: 5%;
+}
+footer ul{
+    flex-direction: column;
+}
+footer li:nth-of-type(1),
+footer li:nth-of-type(2),
+footer li:nth-of-type(3){
+    display: none;
+}
+footer li:nth-of-type(4) dl{
+    position: inherit;
+    margin: auto;
+}
+
+footer p:nth-of-type(2){
+    padding: 20px;
+}
+}
