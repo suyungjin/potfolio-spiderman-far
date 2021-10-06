@@ -567,7 +567,7 @@ header #nav #logo img.logo2{
     display: block;
 }
 header #nav select{
-    width: 30%;
+    width: 25%;
     height: 24px;
     font-size: 12px;
     margin-top: 17px;
@@ -638,7 +638,7 @@ article #content3 p.similar{
 }
 
 #content{
-    margin-top: 70%;
+    margin-top: 50%;
 }
 
 #content section #vidtitle{
@@ -674,9 +674,6 @@ article #content3 p.similar{
     color: white;
 }
 
-#content section{
-    margin-top: 0;
-}
 #content section li{
     flex: 0 1 100%;
 }
