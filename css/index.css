@@ -354,7 +354,7 @@ article #content2 ul li{
     flex: 0 1 300px;
 }
 article #content2 ul dl{
-    padding: 60px 60px 0 0;
+    padding: 0 60px 60px 0;
 }
 article #content2 ul dt{
     color: #5e5e5e;
@@ -634,7 +634,7 @@ header{
 }
 
 article #content3 p.similar{
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 
 #content{
