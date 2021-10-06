@@ -654,6 +654,7 @@ article #content3 p.similar{
 
 #content section #vidtitle dd::before{
     background: white;
+    top: -10%;
 }
 #content div#detail ul{
     margin-top: 10%;
